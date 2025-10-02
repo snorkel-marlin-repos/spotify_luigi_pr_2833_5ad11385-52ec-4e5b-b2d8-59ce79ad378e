@@ -18,8 +18,6 @@
 Package containing core luigi functionality.
 """
 
-from luigi.__meta__ import __version__
-
 from luigi import task
 from luigi.task import Task, Config, ExternalTask, WrapperTask, namespace, auto_namespace
 
@@ -60,8 +58,7 @@ __all__ = [
     'FloatParameter', 'BoolParameter', 'TaskParameter',
     'ListParameter', 'TupleParameter', 'EnumParameter', 'DictParameter',
     'configuration', 'interface', 'local_target', 'run', 'build', 'event', 'Event',
-    'NumericalParameter', 'ChoiceParameter', 'OptionalParameter', 'LuigiStatusCode',
-    '__version__',
+    'NumericalParameter', 'ChoiceParameter', 'OptionalParameter', 'LuigiStatusCode'
 ]
 
 if not configuration.get_config().has_option('core', 'autoload-range'):

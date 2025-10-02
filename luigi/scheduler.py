@@ -445,7 +445,7 @@ class Worker(object):
 
 class SimpleTaskState(object):
     """
-    Keep track of the current state and handle persistence.
+    Keep track of the current state and handle persistance.
 
     The point of this class is to enable other ways to keep state, eg. by using a database
     These will be implemented by creating an abstract base class that this and other classes
