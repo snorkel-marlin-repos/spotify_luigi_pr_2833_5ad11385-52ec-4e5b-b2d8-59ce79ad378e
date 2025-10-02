@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright 2012-2015 Spotify AB
+# Copyright 2012-2016 Spotify AB
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,22 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 """
-The implementations of the hdfs clients.
+luigi.file has moved to :py:mod:`luigi.local_target`
 """
+# Delete this file any time after 7 Feb 2017
 
+import warnings
 
-class HDFSCliError(Exception):
-
-    def __init__(self, command, returncode, stdout, stderr):
-        self.returncode = returncode
-        self.stdout = stdout
-        self.stderr = stderr
-        msg = ("Command %r failed [exit code %d]\n"
-               "---stdout---\n"
-               "%s\n"
-               "---stderr---\n"
-               "%s"
-               "------------") % (command, returncode, stdout, stderr)
-        super(HDFSCliError, self).__init__(msg)
+from luigi.local_target import *  # NOQA
+warnings.warn("luigi.file module has been moved to luigi.local_target",
+              DeprecationWarning)
